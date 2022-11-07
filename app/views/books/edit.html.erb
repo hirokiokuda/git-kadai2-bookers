@@ -1,0 +1,15 @@
+<div>
+  <%= flash[:notice] %>
+</div>
+<h2>Editing book</h2>
+  <%= form_with model: @book do |f| %>
+
+    <div class="field">Title</div>
+    <%= f.text_field :title %>
+    <div class="field">Body</div>
+    <%= f.text_area :body %>
+    <div class="action">
+      <%= f.submit 'Update Book' %>
+    </div>
+    <a class="edit" href="/books">edit</a> |<a class="back" href="/books">Back</a>
+  <% end %>
